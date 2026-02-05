@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-wrapper">
+        <h1 class="title">Simple Calculator</h1><BR>
+    <div class="calculator">
+        <!-- History / previous calculations -->
+    <div class="history" id="history"></div>
+
+        <!-- Current display -->
+        <input type="text" id="display" disabled placeholder="0">
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <!-- First row -->
+           <button class="btn clear" onclick="clearDisplay()">C</button>
+           <button class="btn operator" onclick="calculate('√')">√</button>
+           <button class="btn operator" onclick="calculate('%')">%</button>
+           <button class="btn operator" onclick="calculate('/')">÷</button>
+
+            <!-- Second row -->
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="calculate('*')">×</button>
+
+            <!-- Third row -->
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="calculate('-')">−</button>
+
+            <!-- Fourth row -->
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" onclick="calculate('+')">+</button>
+
+            <!-- Fifth row -->
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn delete" onclick="deleteLast()">Del</button>
+            <button class="btn equal" onclick="calculate('=')">=</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
